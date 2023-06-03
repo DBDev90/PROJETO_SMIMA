@@ -10,7 +10,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('~/fonts/Metropolis/Metropolis-Regular.woff2') format('woff2'), url('~/fonts/Metropolis/Metropolis-Regular.woff') format('woff');
+    src: url('/fonts/Metropolis/Metropolis-Regular.woff2') format('woff2'),
+        url('/fonts/Metropolis/Metropolis-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,8 +19,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('~/fonts/Metropolis/Metropolis-Light.woff2') format('woff2'), 
-        url('~/fonts/Metropolis/Metropolis-Light.woff') format('woff');
+    src: url('/fonts/Metropolis/Metropolis-Light.woff2') format('woff2'),
+        url('/fonts/Metropolis/Metropolis-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -27,8 +28,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('~/fonts/Metropolis/Metropolis-SemiBold.woff2') format('woff2'), 
-        url('~/fonts/Metropolis/Metropolis-SemiBold.woff') format('woff');
+    src: url('/fonts/Metropolis/Metropolis-SemiBold.woff2') format('woff2'), 
+        url('/fonts/Metropolis/Metropolis-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -36,8 +37,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('~/fonts/Metropolis/Metropolis-Bold.woff2') format('woff2'), 
-        url('~/fonts/Metropolis/Metropolis-Bold.woff') format('woff');
+    src: url('/fonts/Metropolis/Metropolis-Bold.woff2') format('woff2'), 
+        url('/fonts/Metropolis/Metropolis-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -715,7 +716,7 @@ strong {
 }
 
 .about-image {
-  border-radius: var(--border-radius-medium);
+  /* border-radius: var(--border-radius-medium); */
   display: block;
   width: 350px;
   height: 400px;
@@ -884,7 +885,7 @@ strong {
   DONATE              
 -----------------------------------------*/
 .donate-section {
-  background-image: url('../images/different-people-doing-volunteer-work.jpg');
+  background-image: url('/images/bg-donate.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -906,7 +907,7 @@ strong {
   NEWS         
 -----------------------------------------*/
 .news-detail-header-section {
-  background-image: url('../images/news/close-up-volunteer-oganizing-stuff-donation.jpg');
+  /* background-image: url('../images/news/bg-news.png'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
