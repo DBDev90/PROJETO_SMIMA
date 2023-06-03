@@ -1,0 +1,261 @@
+﻿<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/Home/Index">
+            <img src="~/images/logo.png" class="logo img-fluid" alt="Smima - E-commerce">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item text-align-center">
+                    <a class="nav-link click-scroll" href="/Home/Index">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="/Home/Index#section_2">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="/Home/Index#section_3">Causas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="/Home/Index#section_4">Voluntários</a>
+                </li>
+
+                <li class="nav-item icon-search">
+                    <form class="custom-form search-form" action="#" method="post" role="form">
+                        <input class="form-control" type="search" placeholder="Pesquisar por..." aria-label="Search">
+                        <button type="submit" class="form-control">
+                            <i class="bi-search"></i>
+                        </button>
+                    </form>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll"><img src="~/images/icons/icon-cart.svg" class="icon-nav" alt="Carrinho"></a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link click-scroll dropdown-toggle d-flex align-items-center hidden-arrow" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <img src="~/images/icons/icon-user.svg" class="icon-nav" alt="Usuário">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">Configurações</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/Login/IndexLogin">Entrar na conta</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/SignUp/IndexSignUp">Registre-se</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 d-flex flex-wrap align-items-center">
+                    <p class="d-flex me-4 mb-0">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>
+                        Ganhe 20% de desconto no seu primeiro pedido. Assine nossa newsletter e receba seu cupom!
+                    </p>
+
+                    <p class="d-flex mb-0">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>
+
+                        <a href="mailto:info@company.com">
+                            Veja aqui
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="slide-section section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- CAROUSEL -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/images/slide/slide1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/slide/slide2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/slide/slide3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="products-section section-padding">
+        <div class="container container-products">
+            <div class="row">
+
+                <h2>Principais Produtos</h2>
+                <hr class="hr hr-blurry" />
+                <!-- Produtos -->
+                <div class="card" style="width: 14rem;">
+                    <img src="~/images/products/frutas.png" class="card-img-top img-product" alt="Planta de venda" />
+                    <div class="card-body">
+                        <h6 class="card-title h6-title" id="title-product">Ameixa de rocambole misturada com cebola e vinagre</h6>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <small>R$ 9,99</small>
+
+                        <div class="tags-block">
+                            <a href="#" class="tags-block-link">
+                                Iluminar
+                            </a>
+                        </div>
+
+                        <hr class="hr hr-blurry" />
+                        <a href="#" class="card-link">Comprar agora</a>
+                        <a class="" type="button"><img src="~/images/icons/icon-cart.svg" class="icon-cart-product" alt="Carrinho"></a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 14rem;">
+                    <img src="~/images/products/frutas.png" class="card-img-top img-product" alt="Planta de venda" />
+                    <div class="card-body">
+                        <h6 class="card-title h6-title" id="title-product">Ameixa de rocambole misturada com cebola e vinagre</h6>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <small>R$ 9,99</small>
+
+                        <div class="tags-block">
+                            <a href="#" class="tags-block-link">
+                                Iluminar
+                            </a>
+                        </div>
+
+                        <hr class="hr hr-blurry" />
+                        <a href="#" class="card-link">Comprar agora</a>
+                        <a class="" type="button"><img src="~/images/icons/icon-cart.svg" class="icon-cart-product" alt="Carrinho"></a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 14rem;">
+                    <img src="~/images/products/frutas.png" class="card-img-top img-product" alt="Planta de venda" />
+                    <div class="card-body">
+                        <h6 class="card-title h6-title" id="title-product">Ameixa de rocambole misturada com cebola e vinagre</h6>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <small>R$ 9,99</small>
+
+                        <div class="tags-block">
+                            <a href="#" class="tags-block-link">
+                                Iluminar
+                            </a>
+                        </div>
+
+                        <hr class="hr hr-blurry" />
+                        <a href="#" class="card-link">Comprar agora</a>
+                        <a class="" type="button"><img src="~/images/icons/icon-cart.svg" class="icon-cart-product" alt="Carrinho"></a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 14rem;">
+                    <img src="~/images/products/frutas.png" class="card-img-top img-product" alt="Planta de venda" />
+                    <div class="card-body">
+                        <h6 class="card-title h6-title" id="title-product">Ameixa de rocambole misturada com cebola e vinagre</h6>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <small>R$ 9,99</small>
+
+                        <div class="tags-block">
+                            <a href="#" class="tags-block-link">
+                                Iluminar
+                            </a>
+                        </div>
+
+                        <hr class="hr hr-blurry" />
+                        <a href="#" class="card-link">Comprar agora</a>
+                        <a class="" type="button"><img src="~/images/icons/icon-cart.svg" class="icon-cart-product" alt="Carrinho"></a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 14rem;">
+                    <img src="~/images/products/frutas.png" class="card-img-top img-product" alt="Planta de venda" />
+                    <div class="card-body">
+                        <h6 class="card-title h6-title" id="title-product">Ameixa de rocambole misturada com cebola e vinagre</h6>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <small>R$ 9,99</small>
+
+                        <div class="tags-block">
+                            <a href="#" class="tags-block-link">
+                                Iluminar
+                            </a>
+                        </div>
+
+                        <hr class="hr hr-blurry" />
+                        <a href="#" class="card-link">Comprar agora</a>
+                        <a class="" type="button"><img src="~/images/icons/icon-cart.svg" class="icon-cart-product" alt="Carrinho"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="signature-section section-padding">
+        <div class="container container-products">
+            <div class="row">
+
+                <h2>Assinaturas</h2>
+                <hr class="hr hr-blurry" />
+                <!-- Produtos -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="">
+                            <img src="~/images/products/assinatura-casa.svg" class="card-img-top" alt="" type="button" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img src="~/images/products/assinatura-jardim.svg" class="card-img-top" alt="" type="button" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img src="~/images/products/assinatura-jardim.svg" class="card-img-top" alt="" type="button" />
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    </div>
+    </div>
+
+    </section>
+</main>

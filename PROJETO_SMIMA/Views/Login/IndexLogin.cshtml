@@ -1,0 +1,88 @@
+﻿<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/Home/Index">
+            <img src="~/images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="/Home/Index">Início</a>
+                </li>
+
+                <li>
+                    <a class="nav-link click-scroll" href="/Produtos/IndexProduto">Produtos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="/Home/Index#section_5">Notícias</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="/Home/Index#section_6">Contato</a>
+                </li>
+
+
+                @*<li class="nav-item ms-3">
+                    <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Doar</a>
+                </li>*@
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="donate-section">
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12 mx-auto">
+                    <form class="custom-form donate-form" action="#" method="get" role="form">
+                        <div class="col-lg-3 col-12 mb-4">
+                            <img src="~/images/logo.png" class="logo img-fluid" alt="">
+                        </div>
+                        <h3 class="mb-4">Entre na sua conta</h3>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-12">
+                                <h5 class="mt-1">E-mail</h5>
+                                <input type="text" class="form-control" placeholder="Digite seu e-mail" required>
+                            </div>
+
+                            <div class="col-lg-12 col-12">
+                                <h5 class="mt-1">Senha</h5>
+                                <input type="text" class="form-control" placeholder="Digite sua senha" required>
+
+                                <p type="button" class="text-end">Esqueceu sua senha?</p>
+                            </div>
+
+                            <div class="col-lg-12 col-12 mt-2">
+                                <button type="submit" class="form-control mt-4">Entrar</button>
+                            </div>
+
+                            <p class="text-center">ou continue com</p>
+
+                            <div class="d-flex gap-2 mb-3 justify-content-center mt-3">
+                                <button type="submit" class="nav-link custom-btn custom-border-btn btn"><i class="bi bi-google"></i>  Google</button>
+                                <button type="submit" class="nav-link custom-btn custom-border-btn btn"><i class="bi bi-microsoft"></i>  Conta Microsoft</button>
+                                <button type="submit" class="nav-link custom-btn custom-border-btn btn"><i class="bi bi-facebook"></i>  Facebook</button>
+                            </div>
+
+                            <div class="d-flex gap-2 mb-3 justify-content-center mt-3">
+                                <p class="text-center">Não tem uma conta ainda?</p> <a class="" href="sign-up.html" target="_blank">Registre-se aqui!</a>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
