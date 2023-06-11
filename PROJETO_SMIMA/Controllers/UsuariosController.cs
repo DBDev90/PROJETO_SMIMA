@@ -10,107 +10,87 @@ using PROJETO_SMIMA.Entidades;
 
 namespace PROJETO_SMIMA.Controllers
 {
-    public class ProdutosController : Controller
+    public class UsuariosController : Controller
     {
         private readonly Contexto _context;
-        private string path;
 
-        public ProdutosController(Contexto context, IWebHostEnvironment server)
+        public UsuariosController(Contexto context)
         {
             _context = context;
-            path = server.WebRootPath+"\\uploads\\";
         }
 
-        public IActionResult IndexProduto()
-        {
-            return View();
-        }
-
-        // GET: Produtos
+        // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-              return _context.PRODUTOS != null ? 
-                          View(await _context.PRODUTOS.ToListAsync()) :
-                          Problem("Entity set 'Contexto.PRODUTOS'  is null.");
+              return _context.USUARIOS != null ? 
+                          View(await _context.USUARIOS.ToListAsync()) :
+                          Problem("Entity set 'Contexto.USUARIOS'  is null.");
         }
 
-        // GET: Produtos/Details/5
+        // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.PRODUTOS == null)
+            if (id == null || _context.USUARIOS == null)
             {
                 return NotFound();
             }
 
-            var produto = await _context.PRODUTOS
+            var usuario = await _context.USUARIOS
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (produto == null)
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            return View(produto);
+            return View(usuario);
         }
 
-        // GET: Produtos/Create
+        // GET: Usuarios/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Produtos/Create
+        // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Descricao,Valor,Imagem")] Produto produto, IFormFile imagem)
+        public async Task<IActionResult> Create([Bind("Id,Login,Senha")] Usuario usuario)
         {
-           
-                if(imagem.Length > 0)
-                {
-                    if (!Directory.Exists(path))
-                    {
-                        Directory.CreateDirectory(path);
-                    }
-
-                    using(var stream = System.IO.File.Create(path + imagem.FileName))
-                    {
-                        await imagem.CopyToAsync(stream);
-                    }
-                }
-                produto.Imagem = imagem.FileName;
-
-                _context.Add(produto);
+            if (ModelState.IsValid)
+            {
+                _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-           
-           
+            }
+            return View(usuario);
         }
 
-        // GET: Produtos/Edit/5
+        // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.PRODUTOS == null)
+            if (id == null || _context.USUARIOS == null)
             {
                 return NotFound();
             }
 
-            var produto = await _context.PRODUTOS.FindAsync(id);
-            if (produto == null)
+            var usuario = await _context.USUARIOS.FindAsync(id);
+            if (usuario == null)
             {
                 return NotFound();
             }
-            return View(produto);
+            return View(usuario);
         }
 
-        // POST: Produtos/Edit/5
+        // POST: Usuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Descricao,Valor,Imagem")] Produto produto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Login,Senha")] Usuario usuario)
         {
-            if (id != produto.Id)
+            if (id != usuario.Id)
             {
                 return NotFound();
             }
@@ -119,12 +99,12 @@ namespace PROJETO_SMIMA.Controllers
             {
                 try
                 {
-                    _context.Update(produto);
+                    _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProdutoExists(produto.Id))
+                    if (!UsuarioExists(usuario.Id))
                     {
                         return NotFound();
                     }
@@ -135,49 +115,49 @@ namespace PROJETO_SMIMA.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(produto);
+            return View(usuario);
         }
 
-        // GET: Produtos/Delete/5
+        // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.PRODUTOS == null)
+            if (id == null || _context.USUARIOS == null)
             {
                 return NotFound();
             }
 
-            var produto = await _context.PRODUTOS
+            var usuario = await _context.USUARIOS
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (produto == null)
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            return View(produto);
+            return View(usuario);
         }
 
-        // POST: Produtos/Delete/5
+        // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.PRODUTOS == null)
+            if (_context.USUARIOS == null)
             {
-                return Problem("Entity set 'Contexto.PRODUTOS'  is null.");
+                return Problem("Entity set 'Contexto.USUARIOS'  is null.");
             }
-            var produto = await _context.PRODUTOS.FindAsync(id);
-            if (produto != null)
+            var usuario = await _context.USUARIOS.FindAsync(id);
+            if (usuario != null)
             {
-                _context.PRODUTOS.Remove(produto);
+                _context.USUARIOS.Remove(usuario);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProdutoExists(int id)
+        private bool UsuarioExists(int id)
         {
-          return (_context.PRODUTOS?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.USUARIOS?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

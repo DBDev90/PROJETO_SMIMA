@@ -42,7 +42,7 @@
             <div class="row">
 
                 <div class="col-lg-6 col-12 mx-auto">
-                    <form class="custom-form donate-form" action="#" method="get" role="form">
+                    <form class="custom-form donate-form" action="/Login/Login" method="post" role="form">
                         <div class="col-lg-3 col-12 mb-4">
                             <img src="~/images/logo.png" class="logo img-fluid" alt="">
                         </div>
@@ -51,12 +51,12 @@
                         <div class="row">
                             <div class="col-lg-12 col-12">
                                 <h5 class="mt-1">E-mail</h5>
-                                <input type="text" class="form-control" placeholder="Digite seu e-mail" required>
+                                <input type="text" name="login" class="form-control" placeholder="Digite seu e-mail" required>
                             </div>
 
                             <div class="col-lg-12 col-12">
                                 <h5 class="mt-1">Senha</h5>
-                                <input type="text" class="form-control" placeholder="Digite sua senha" required>
+                                <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" required>
 
                                 <p type="button" class="text-end">Esqueceu sua senha?</p>
                             </div>
