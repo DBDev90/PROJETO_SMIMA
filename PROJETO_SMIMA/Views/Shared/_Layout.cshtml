@@ -26,16 +26,97 @@
     
     <body id="section_1">    
 
-    @if (User.IsInRole("Administrador"))
+    @*@if (User.IsInRole("Administrador"))
     {
         <a >Aqui é administrador</a>
-    }
+    }*@
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/Home/Index">
+                <img src="~/images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/Home/Index">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/Home/Index#section_2">Sobre</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/Home/Index#section_3">Causas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/Home/Index#section_4">Voluntários</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Atalho</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/Produtos/IndexProduto">Produtos</a></li>
+
+                            <li><a class="dropdown-item" href="/Home/Index#section_5">Notícias</a></li>
+
+                            @*<li><a class="dropdown-item" href="/Donate/Donate">Doação</a></li>*@
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/Home/Index#section_6">Contato</a>
+                    </li>
+                    
+                    <li class="nav-item icon-search">
+                        <form class="custom-form search-form" action="#" method="post" role="form">
+                            <input class="form-control" type="search" placeholder="Pesquisar por..." aria-label="Search">
+                            <button type="submit" class="form-control">
+                                <i class="bi-search"></i>
+                            </button>
+                        </form>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll"><img src="~/images/icons/icon-cart.svg" class="icon-nav" alt="Carrinho"></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link click-scroll dropdown-toggle d-flex align-items-center hidden-arrow" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <img src="~/images/icons/icon-user.svg" class="icon-nav" alt="Usuário">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                                <li>
+                                    <a class="dropdown-item" href="/Login/IndexLogin">Entrar na conta</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/SignUp/IndexSignUp">Registre-se</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="/Donate/Donate">Doar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
         <main>
         @RenderBody()
         </main>
 
-        <footer class="site-footer">
+    <footer class="site-footer footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-4">
