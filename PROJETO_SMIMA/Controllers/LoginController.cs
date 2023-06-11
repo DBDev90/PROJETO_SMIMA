@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using PROJETO_SMIMA.Entidades;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PROJETO_SMIMA.Controllers
 {
+    
     public class LoginController : Controller
     {
         private Contexto db;
@@ -42,6 +44,7 @@ namespace PROJETO_SMIMA.Controllers
 
                 claims.Add(new Claim(ClaimTypes.Name, pessoa.Login));
                 claims.Add(new Claim(ClaimTypes.Role, "Administrador"));
+             
 
 
                 var claimsIdentity = new ClaimsIdentity(

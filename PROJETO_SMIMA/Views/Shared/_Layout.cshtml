@@ -26,7 +26,10 @@
     
     <body id="section_1">    
 
-        
+    @if (User.IsInRole("Administrador"))
+    {
+        <a >Aqui é administrador</a>
+    }
 
         <main>
         @RenderBody()
