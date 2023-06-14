@@ -6,11 +6,11 @@
 }
 
 
-
+@*
 <p>
     <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+</p>*@
+@*<table class="table">
     <thead>
         <tr>
             <th>
@@ -45,4 +45,54 @@
         </tr>
 }
     </tbody>
-</table>
+</table>*@
+
+<div class="card w-75">
+    <div class="card-header">
+        Lista de Produtos
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Valor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Imagem)
+                    </th>
+                    <th>
+                        Ações
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Valor)
+                        </td>
+                        <td>
+                            <img src="/uploads/@item.Imagem" class="card-img-top img-product" alt="Planta de venda" />
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Consultar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <a type="button" tole="button" class="btn btn-primary" href="/Produtos/Create">Cadastrar Novo Produto</a>
+</div>
