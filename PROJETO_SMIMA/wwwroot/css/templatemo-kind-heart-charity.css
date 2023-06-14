@@ -55,39 +55,35 @@ https://templatemo.com/tm-581-kind-heart-charity
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --bg-color:                     #F6FAF6;
-  --white-color:                  #ffffff;
-  --primary-color:                #97A36D;
-  --secondary-color:              #50614A;
-  --section-bg-color:             #F6FAF6;
-  --site-footer-bg-color:         #97A36D;
-  --custom-bg-color:              #F6FAF6;
-  --custom-btn-bg-color:          #97A36D;
-  --custom-btn-bg-hover-color:    #4F6921;
-  --dark-color:                   #222222;
-  --p-color:                      #666666;
-  --border-color:                 #e9eaeb;
-
-  --body-font-family:             'Urbanist', sans-serif;
-
-  --h1-font-size:                 52px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  16px;
-  --btn-font-size:                18px;
-  --copyright-font-size:          14px;
-
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
-
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
+    --bg-color: #F6FAF6;
+    --white-color: #ffffff;
+    --primary-color: #97A36D;
+    --secondary-color: #50614A;
+    --section-bg-color: #F6FAF6;
+    --site-footer-bg-color: #97A36D;
+    --custom-bg-color: #F6FAF6;
+    --custom-btn-bg-color: #97A36D;
+    --custom-btn-bg-hover-color: #4F6921;
+    --dark-color: #222222;
+    --p-color: #666666;
+    --border-color: #e9eaeb;
+    --body-font-family: 'Urbanist', sans-serif;
+    --h1-font-size: 52px;
+    --h2-font-size: 46px;
+    --h3-font-size: 32px;
+    --h4-font-size: 28px;
+    --h5-font-size: 24px;
+    --h6-font-size: 22px;
+    --p-font-size: 16px;
+    --btn-font-size: 18px;
+    --copyright-font-size: 14px;
+    --border-radius-large: 100px;
+    --border-radius-medium: 20px;
+    --border-radius-small: 10px;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
 }
 
 body {
